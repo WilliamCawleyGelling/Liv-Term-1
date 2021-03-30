@@ -1,6 +1,3 @@
-#William Cawley Gelling 
-#Student NO 201077658
-
 #This is the function used to calculate the remaining interior angle 
 def intAngle():
 
