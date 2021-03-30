@@ -1,6 +1,5 @@
 '''
 William Cawley Gelling 
-201077658
 Assignment 2
 '''
 #This is the function for sum(x,y), returns the answer for x + y = 
