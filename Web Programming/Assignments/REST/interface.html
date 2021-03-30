@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <title>Interface for V1 Web Service</title>
+        <meta name= "author" content ="William Cawley Gelling"> 
+        <meta name="discription" content="Interface for web service"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="interface.js" defer></script>
+    </head>
+    <body>
+        <h1>Interface for V1 Web Service</h1>
+        <h4>Examples of Requests</h4>
+        <p> Get the list of all teams by having: <br>HTML Method: GET, Resource: teams <br><br>
+            Get the teams that have the regular expression: <br>HTML Method: GET, Resource: teams?tName=&lt;regexp&gt; <br><br>
+            Get the list of all players in a teams by having: <br>HTML Method: GET, Resource: teams/&lt;team&gt;/players <br><br>
+            Get information on an idividual player using the pid (Player ID) by having: <br>HTML Method: GET, Resource: teams/&lt;team&gt;/players/&lt;pid&gt; <br><br>
+            Post new information on a player in a team (make sure the team already exists in the database) by having: <br>HTML Method: POST, Resource: teams/&lt;team&gt;/players <br>Request Body Example: {"tName" : "Liverpool", "fName" : "Will", "lName":"Cawley Gelling", "nationality" : "English", "DoB" : "2001-04-07" }<br><br> 
+            Delete information on an idividual player using the pid (Player ID) by having: <br>HTML Method: DELETE, Resource: teams/&lt;team&gt;/players/&lt;pid&gt; <br><br>
+            Edit information on an idividual player using the pid (Player ID) by having: <br>HTML Method: PATCH, Resource: teams/&lt;team&gt;/players/&lt;pid&gt; <br>Request Body Example: {"tName" : "Everton", "fName" : "Will", "lName":"Cawley Gelling", "nationality" : "English", "DoB" : "2001-04-07" }<br><br> 
+
+        </p>
+        <form name="form1" id="form1" method="post">
+            <label for = "HTMLmethod">HTML Method</label>
+            <select name = "HTMLmethod" id = "HTMLmethod"> 
+                <option value = "GET">GET</option>
+                <option value = "POST">POST</option>
+                <option value = "PATCH">PATCH</option>
+                <option value = "DELETE">DELETE</option>
+            </select> <br> <br>
+            <label for = "resource">Resource: </label>
+            <input type="text" name="resource" id="resource"   size="80"><br><br>
+            <label for = "request">Request Body: </label><br>
+            <textarea name="request" id="request"  cols="80" rows="5">Enter Json request here</textarea><br>
+        </form><br>
+        <button onclick="submit()">Submit Request</button>
+        <button onclick="clearResponse()">Clear Response</button>
+        <p>Response code:</p>
+        <div id="responseCode"></div>
+        <p>Response:</p>
+        <div id="response"></div>
+    </body>
+</html>

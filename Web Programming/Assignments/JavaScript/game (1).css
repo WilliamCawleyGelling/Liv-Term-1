@@ -1,0 +1,137 @@
+
+@media screen {article {display: grid; 
+    grid-template-rows: auto auto 90vh ;
+    grid-template-columns:  auto; 
+    grid-template-areas:  " Title "
+                          " Instruction "
+                          " Main ";
+}}
+
+body {margin: 0px; 
+      background-color: darkblue; 
+    
+} 
+
+
+#Title {background-color: darkblue;
+        text-align: center;
+        margin: 0; 
+        padding: 0;
+
+    }
+
+#Title h2 {color: antiquewhite;
+            font-size: 6vw;
+            margin: 2vh ;
+            margin-bottom: 0; 
+            padding: 0;
+            }
+
+h4 {color: antiquewhite;
+    font-size: 3vw;
+    margin: 6vh ;
+}
+
+
+#Instruction {color: antiquewhite;
+              background-color: darkblue ;
+             margin-left: 10vw; 
+             margin-right: 10vw;
+             }
+
+#Instruction h3 {margin-top: 0;}
+
+
+
+
+
+            
+#Main {background-color: rgb(107, 0, 139);
+       text-align: center;
+       
+}
+
+#noOfDice {width: 7em;
+            height: 2.5vw;
+            font-size: 2vw;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+}
+
+#startButton { background-color: darkblue;
+               color: antiquewhite;
+               font-size: 2vw;
+                
+            }
+
+#error { color: orange;
+        font-weight: bold;
+        font-size: 2vw ;
+        margin-top: 3vh; 
+    }
+
+#play { display: none; }
+
+#diceArray { display:flex; 
+             flex-direction: row;
+             flex-wrap: nowrap;
+             justify-content: center;
+
+}
+#diceArray img { width: 8vw; 
+                height: auto; 
+                margin: 0vw 2vw 0vw 2vw;
+}
+
+#play table { margin: 5vh auto 0vh;
+              border-collapse: collapse;
+              font-size: 3vw;
+              color: antiquewhite;
+              background-color: darkblue;
+              
+}
+
+#play table, td ,th { border: 1px solid antiquewhite;
+
+} 
+
+#rerollButton { background-color: darkblue;
+    color: antiquewhite;
+    font-size: 2vw;
+    margin: 5vw; 
+     
+ }
+ #quitButton { background-color: darkblue;
+    color: antiquewhite;
+    font-size: 2vw;
+    margin: 5vw; 
+     
+ }
+
+
+#end {
+    display: none;
+}
+
+#end table { margin: 4vh auto 5vh;
+    border-collapse: collapse;
+    font-size: 3vw;
+    color: antiquewhite;
+    background-color: darkblue;
+}
+
+#playAgain { background-color: darkblue;
+    color: antiquewhite;
+    font-size: 2vw;
+    margin: 5vw; 
+}
+
+footer{ background-color: darkblue;
+        color: antiquewhite;
+
+}
+
+
+
+
+

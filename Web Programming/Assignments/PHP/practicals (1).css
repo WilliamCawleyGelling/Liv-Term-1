@@ -1,0 +1,35 @@
+body {background-color: rgb(188, 218, 236);
+    text-align: center;
+    }
+
+h1 {text-align:center; }
+
+p {text-align:left;  
+    margin-left: 10vw;
+    margin-right: 10vw;}
+
+label {font-size: 150%;}
+
+#Title {background-color: rgb(170, 2, 2);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left:0;
+    padding-right:0;
+    font-size:150%;
+}
+input {font-size:120%;}
+
+select {font-size:120%}
+
+table { margin-left: auto;
+        margin-right:auto;
+        border: 1px solid black; 
+        border-collapse: collapse;
+    }
+
+th, td {border: 1px solid black;
+        width: 10em;
+     }
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head> 
+        <title> Game of Dice </title>
+        <meta charset="utf-8">
+        <meta name= "author" content ="William Cawley Gelling"> 
+        <meta name="discription" content="Game of Dice "> 
+        <meta name="keywords" content="Game of Dice, Chance, Random, Dice, William Cawley Gelling">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="game.js" defer></script>
+        <link rel="stylesheet" type ="text/css" href="game.css"> 
+    </head>
+    
+    <body> 
+        <article>
+            <section id = "Title">
+                <h2> Game of Dice</h2>
+            </section>
+            <section id = "Instruction"> 
+
+                    <input id = "instructionButton" type = "button" value = "Instructions" onclick ="openInstruction()">
+                    <div id ="instructions" style="display: none;">
+                    <h3> Instructions</h3>
+                    <p> Welcome to the Game of Dice. Start by choosing how many dice you wish to play with, from 3 to 6. 
+                        Press the START button to begin. Your dice will then automatically roll and the first round will play.
+                        Your score will then be calculated according to the rules below. </p>
+
+                    <ul>
+                        <li>All the same: You get 60 points for having all the dice the same, plus the sum of all the dice </li>
+                        <li>All but one the same: You get 40 points for having all but one the same, plus the sum of all the dice </li>
+                        <li>A run: You get 20 points for having a run of dice for exanple (2,3,4,5). Plus the sum of all the dice  </li>
+                        <li>No repeats: You get the sum of the dice for having dice with all diffrent values that are not a run </li>
+                        <li>None of the above: If none of the above conditions are met then you get 0 for the round. </li>
+                    </ul>
+
+                    <p> You will then have the option to roll again or to finish. 
+                        On finishing your total score will be displayed as well as the number of rounds played and your avarage score. 
+                        You can play again by pressing the play again button.</p>
+
+                    <input id = "closeInstructions" type = "button" value = "Close Instructions" onclick ="closeInstruction()">
+                    </div>
+            </section>
+            <section id = "Main">
+               
+                <form id="startForm"> 
+                    <h4 > Chose the number of dice, between 3 and 6 </h4>
+                    <br> 
+                    <input type = "number" name = "noOfDice" id="noOfDice" placeholder="No. of dice" min="3" max = "6" > 
+                    <br> 
+                    <input type = "button"  id="startButton" value = "START" onclick="start()" >
+                    <div id = "error"> </div>
+                </form>
+
+                <div id="play"> 
+                    <h4>You have rolled:  </h4> 
+                    
+                    <div id="diceArray"> 
+                        
+                        <div id="dice0">  </div>
+                        <div id="dice1">  </div>
+                        <div id="dice2">  </div>
+                        <div id="dice3">  </div>
+                        <div id="dice4">  </div>
+                        <div id="dice5"> </div>
+
+                    </div>
+                    <h4 id = "outcome"> ""  </h4>
+                    
+                    <table>
+                        <tr><th>Round</th><th> Points </th><th> Total Points </th></tr>
+                        <tr><td id = "tdRound"></td><td id = "tdScore"></td><td id="tdTotalScore"></td></tr>
+                    </table>
+
+                    <input type = "button" id = "rerollButton" value = "Roll Again" onclick = "rollAgain()"> 
+                    
+                    <input type = "button" id = "quitButton" value = "QUIT" onclick = "end()">
+
+                </div>
+
+                <div id="end"> 
+                    <h4> Thank You for playing</h4>
+                    <h4> Your Results are... </h4>
+
+                    <table>
+                        <tr><th>Rounds Played</th><th> Total Points </th><th> Average Points </th></tr>
+                        <tr><td id = "td2Round"></td><td id = "td2TotalScore"></td><td id="tdAveScore"></td></tr>
+                    </table>
+
+                    <input type = "button" id = "playAgain" value = "Play Again" onclick = "restart()">
+
+                </div>
+
+            </section> 
+        </article>  
+        <footer> Created by William Cawley Gelling (W.A.Cawley-Gelling@liverpool.ac.uk) 
+            <br>All images were created by William Cawley Gelling
+            <br>Last modification <!--#flastmod file="game.html" -->  </footer>
+    </body>
+</html>

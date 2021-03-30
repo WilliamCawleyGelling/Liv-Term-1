@@ -1,0 +1,171 @@
+/*
+GENERAL SETUP
+ */
+body {margin: 0px; 
+        background-color: rgb(188, 218, 236);
+} 
+
+/* screen setup between 900 - 600 px width */ 
+@media screen and (max-width:900px) and (min-width: 600px) {article { display: grid; 
+        grid-template-rows: auto 100vh auto auto auto auto auto;
+        grid-template-columns:  50% 50% ; 
+        grid-template-areas:    " nav nav " 
+                        " banner banner " 
+                        " me education " 
+                        " me skills" 
+                        " aboutMe aboutMe "
+                        " workex workex "
+                        " career career " 
+                        " hobbies hobbies " ;         
+
+}}
+
+@media screen and (min-width: 900px) {article {display: grid; 
+        grid-template-rows: auto 100vh auto auto auto auto auto;
+        grid-template-columns:  20% 30% 30% 20% ; 
+        grid-template-areas: " nav nav nav  nav " 
+                             " banner banner banner banner " 
+                             " education education skills skills " 
+                             " me aboutMe aboutMe ." 
+                             " me workex workex ."
+                             " me career career ." 
+                             " me hobbies hobbies ." ;
+}}
+
+/* narrow screen width */ 
+@media screen and (max-width: 600px){ article { display: grid; 
+                        grid-template-rows: auto 100vh auto auto auto auto auto;
+                        grid-template-columns:  50% 50% ; 
+                        grid-template-areas:    " nav nav " 
+                                                " banner banner " 
+                                                " me education " 
+                                                " skills skills" 
+                                                " aboutMe aboutMe "
+                                                " workex workex "
+                                                " career career " 
+                                                " hobbies hobbies " ;  
+}
+header nav { position: absolute;}
+}
+
+.pad   {padding-left: 2em;
+        padding-right: 2em ;
+}
+
+/*
+Header
+*/ 
+header { grid-area: nav; 
+        position: fixed;
+        }
+
+header nav {display: flex;
+            position: fixed;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            }
+header nav ul {list-style-type: none;
+               font-size: 2vw;
+               margin: 0; 
+               padding: 0; 
+}
+
+header nav li {
+                float: left;
+
+}
+header nav li a {display: block;
+                 color: black;
+                 text-align: center;
+                 padding: 2vh ;
+                 text-decoration: none;
+}
+header nav li a:hover { background-color: blue;}
+/*
+contact information
+*/ 
+#ContactInformation { grid-area: banner; 
+                      background-image: url(https://www.quinipet.org/uploads/4/7/9/0/4790678/background-images/871743862.jpg);
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      background-color: transparent;
+                      display: flex;
+                      justify-content: center;
+                      align-content: center;
+                      }
+                
+#ContactInformation table {text-align: center;
+                           margin: auto auto; 
+                          }
+
+
+                      
+/*
+Education 
+ */
+
+#Education { grid-area: education; 
+             text-align: center;
+
+             } 
+#Education h2 {}
+
+#Education ul { list-style-type: none;
+}
+               
+
+/*
+Skills 
+ */
+ 
+#Skills {grid-area: skills; 
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-content: center;
+
+        } 
+
+#Skills table { 
+                margin: auto auto; 
+                }
+
+/*
+about me
+ */ 
+
+#AboutMe {grid-area: aboutMe;
+          }
+        
+
+
+ 
+/*
+Work Experience 
+ */ 
+#Workex {grid-area: workex;}
+
+
+#Workex p a {display: inline; }
+
+
+
+#Workex p a:hover {background-color: blue;}
+
+/*
+Career Goals 
+ */
+ 
+#CareerGoals {grid-area: career;
+              }
+
+/*
+Hobbies 
+ */ 
+ 
+#Hobbies {grid-area: hobbies;
+          }
+
+          
+
